@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sayangkuu :)</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+VIC+Guides&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Rubik+Vinyl&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Indie+Flower&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+VIC+Guides&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Rubik+Vinyl&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Indie+Flower&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+VIC+Guides&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Rubik+Vinyl&family=Ysabeau+SC:wght@1..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="landing-page" id="landing-page">
+        <h1>Hai Sayang</h1>
+        <p>Ada sedikit pesen nih buat kamu :) 🎉</p>
+        <button onclick="enterPage()">buka</button>
+    </div>
+
+    <div class="main-content" id="main-content">
+        <div class="card">
+            <h1>Happy Birthday, Sayangkuu 🎉</h1>
+            <p>Tepat dihari ini kamu semakin dewasa, kini sudah beranjak 21 tahun, semoga diumur yang baru ini kamu
+                selalu diberi kesehatan, kelancaran dalam berporses sayangkuu ❤️</p>
+            <p>Makasi yaa udah mau bertahan sejauh ini, semoga kita selalu bisa bersama sampai kapanpun itu💕</p>
+            <p>💕 kita sukses bareng yaa, love you sayangkuu 💕</span></p>
+            <div class="heart">❤️❤️❤️</div>
+            <div class="button">
+                <a href="content.html">View Masage🎁</a>
+            </div>
+        </div>
+        <div class="balloons" id="balloons"></div>
+    </div>
+
+    <script>
+        function createBalloon() {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            balloon.style.left = Math.random() * 100 + 'vw';
+            balloon.style.animationDuration = 5 + Math.random() * 5 + 's';
+            document.getElementById('balloons').appendChild(balloon);
+            setTimeout(() => balloon.remove(), 10000);
+        }
+
+        function enterPage() {
+            document.getElementById('landing-page').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }
+
+        setInterval(createBalloon, 500);
+    </script>
+</body>
+
+</html>

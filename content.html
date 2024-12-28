@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sayangkuu</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+VIC+Guides&family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&family=Rubik+Vinyl&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Indie+Flower&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+VIC+Guides&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Rubik+Vinyl&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Indie+Flower&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+VIC+Guides&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Rubik+Vinyl&family=Ysabeau+SC:wght@1..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="main-content">
+        <div>
+            <div class="masage">
+                <div class="content">
+                    <h2>Thanks To You ❤️</h2>
+                    <p>
+                        Makasi yaa sayangkuu udah bertahan sejauh ini, makasi juga buat semua udah kamu kasih buat aku,
+                        selalu suport aku dan selalu bantu aku pas aku butuh bantuan
+                        mungkin ini yang aku kasih ga seberapa, semoga besok kita terus sama-sama sukses bareng yaa :),
+                        biar bisa kasih hadiah yang jauh lebih keren, pokoknya sekali lagi makasih udah jadi yang terbaik
+                        buat aku 💕💕💕
+                    </p>
+                </div>
+                <div class="content">
+                    <h2>For You ❤️</h2>
+                    <p>
+                        Hai sayangkuu, kita selalu bersama yaaa :), maafin aku klo dari sifatku banyak yang kamu ga suka,
+                        apalagi kata-kataku sering buat kamu ngambek bahkan badmood, tapi kamu harus tau aku sayang sama
+                        kamu kok, emang aku aja yang suka asal-asalan klo ngomong yaa, maafin aku yaa sayangkuu 💕💕💕
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="balloons"></div>
+    </div>
+
+    <script>
+        function createBalloon() {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            balloon.style.left = Math.random() * 100 + 'vw';
+            balloon.style.animationDuration = 5 + Math.random() * 5 + 's';
+            document.getElementById('balloons').appendChild(balloon);
+            setTimeout(() => balloon.remove(), 10000);
+        }
+
+        // Memulai animasi balon segera setelah halaman dimuat
+        window.onload = () => {
+            setInterval(createBalloon, 500);
+        };
+    </script>
+</body>
+
+</html>
